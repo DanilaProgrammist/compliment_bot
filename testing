@@ -1,0 +1,5 @@
+    for j in compliments_julia:
+        bot.send_message(message.chat.id, compliments_julia[j])
+        time.sleep(3)
+
+
