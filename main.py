@@ -5,7 +5,7 @@ import time
 import random
 from random import choice
 
-token = "1998992268:AAHhj2apOozth2R46BU_WKaam3WFkkitsv8"
+token = "your_token"
 compliments_julia = []
 bot = telebot.TeleBot(token)
 
@@ -25,12 +25,12 @@ print(compliments_julia)
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     for i in range(3):
-        bot.send_message("-1001534956206", random.choice(compliments_julia))
+        bot.send_message("your_id", random.choice(compliments_julia))
         time.sleep(15)
 
 
 @bot.message_handler(func=lambda message: True)
 def send_notification(message):
-    bot.send_message("666667283", "Комплименты доставлены")
+    bot.send_message("your_id", "Комплименты доставлены")
 bot.polling()
 
